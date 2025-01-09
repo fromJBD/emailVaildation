@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Filter</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <form id="emailForm">
+        <div class="column">
+            <label for="emailInput">Enter Emails (one per line):</label>
+            <textarea id="emailInput" rows="10" cols="50" oninput="updateMailCount()"></textarea>
+            <p><b><span id="mailCnt">0</span></b> mails are entered</p>
+            <button type="submit">Filter Emails</button>
+        </div>
+
+    
+        <div class="column">
+            <label for="validEmails">Valid Emails:</label>
+            <textarea id="validEmails" rows="10" cols="50" readonly></textarea>
+            <p><b><span id="validCnt">0</span></b> mails are valid</p>
+            <button type="button" class="copy-button" id="copyValidEmails">Copy Valid Emails</button>
+        </div>
+    
+        <div class="column">
+            <label for="invalidEmails">Invalid Emails:</label>
+            <textarea id="invalidEmails" rows="10" cols="50" readonly></textarea>
+        </div>
+    
+    </form>   
+
+<script src="JS/filterEmails.js"></script>
+</body>
+</html>
